@@ -9,7 +9,7 @@ jobs:
   run-pytest:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Setup Python
@@ -24,3 +24,4 @@ jobs:
 
       - name: Run testcases
         run: pytest
+

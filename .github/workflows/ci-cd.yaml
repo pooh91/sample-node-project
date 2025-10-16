@@ -3,11 +3,12 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -23,6 +24,5 @@ jobs:
       - name: Run tests
         run: npm test
 
-
       - name: Deploy to production
-        run: npm run
+        run: npm run deploy
